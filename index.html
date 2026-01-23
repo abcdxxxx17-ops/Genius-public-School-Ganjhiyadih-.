@@ -6,24 +6,101 @@
 <title>Genius Public School | Ganjhiyadih</title>
 
 <style>
-body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#f4f7fb;color:#333;}
-header{background:linear-gradient(135deg,#0b5ed7,#084298);color:#fff;padding:25px;text-align:center;position:relative;}
+body{
+  margin:0;
+  font-family:Segoe UI,Arial,sans-serif;
+  background:#f4f7fb;
+  color:#333;
+}
+header{
+  background:linear-gradient(135deg,#0b5ed7,#084298);
+  color:#fff;
+  padding:25px;
+  text-align:center;
+  position:relative;
+}
 .school-logo{width:110px;margin-bottom:10px;}
-.lang-btn{position:absolute;top:15px;right:15px;background:#fff;color:#0b5ed7;border:none;padding:6px 10px;border-radius:5px;cursor:pointer;font-weight:bold;}
-nav{background:#083b7a;padding:10px;text-align:center;}
-nav a{color:#fff;margin:0 10px;text-decoration:none;font-weight:600;}
-section{padding:45px 20px;max-width:1100px;margin:auto;}
-.hero{text-align:center;background:#e9f1ff;}
+.lang-btn{
+  position:absolute;top:15px;right:15px;
+  background:#fff;color:#0b5ed7;
+  border:none;padding:6px 10px;
+  border-radius:5px;font-weight:bold;cursor:pointer;
+}
+nav{
+  background:#083b7a;
+  padding:10px;
+  text-align:center;
+}
+nav a{
+  color:#fff;
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:600;
+}
+section{
+  padding:45px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+.hero{
+  background:#e9f1ff;
+  text-align:center;
+}
 h2{color:#0b5ed7;}
-.card{background:#fff;padding:25px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.08);}
-input,select,textarea{width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:5px;}
-label{font-weight:600;}
-button{background:#0b5ed7;color:#fff;border:none;padding:12px 18px;border-radius:6px;font-size:16px;cursor:pointer;}
-.notice{background:#fff3cd;padding:15px;border-left:6px solid #ffc107;margin-bottom:10px;}
-footer{background:#0b5ed7;color:#fff;text-align:center;padding:15px;}
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;padding:12px 18px;border-radius:50px;text-decoration:none;font-weight:bold;}
-.apply-btn{background:#198754;margin-top:15px;}
-.help{position:fixed;bottom:80px;right:20px;background:#0d6efd;color:#fff;padding:12px 16px;border-radius:50px;text-decoration:none;}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.card{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+.notice{
+  background:#fff3cd;
+  padding:15px;
+  border-left:6px solid #ffc107;
+  margin-bottom:10px;
+}
+footer{
+  background:#0b5ed7;
+  color:#fff;
+  text-align:center;
+  padding:15px;
+}
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:#fff;
+  padding:12px 18px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.apply-btn{
+  display:inline-block;
+  margin-top:15px;
+  background:#0b5ed7;
+  color:#fff;
+  padding:12px 20px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.help-chat{
+  position:fixed;
+  bottom:90px;
+  right:20px;
+  background:#0b5ed7;
+  color:#fff;
+  padding:12px 16px;
+  border-radius:50px;
+  cursor:pointer;
+}
 </style>
 </head>
 
@@ -38,95 +115,117 @@ footer{background:#0b5ed7;color:#fff;text-align:center;padding:15px;}
 
 <nav>
 <a href="#home">Home</a>
-<a href="#news">Announcement</a>
-<a href="#form">Online Admission</a>
+<a href="#academics">Academics</a>
+<a href="#timetable">Time Table</a>
+<a href="#documents">Documents</a>
+<a href="#transport">Transport</a>
+<a href="#events">Events</a>
+<a href="#news">News</a>
+<a href="#faq">FAQs</a>
 <a href="#contact">Contact</a>
 </nav>
 
 <section id="home" class="hero">
 <h2>Welcome</h2>
 <p>Admission Open – Nursery to Class 8th</p>
-<a href="#form"><button class="apply-btn">Apply Now</button></a>
+<a href="#contact" class="apply-btn">Apply Now</a>
+</section>
+
+<section id="academics">
+<h2>Academic Curriculum</h2>
+<div class="grid">
+<div class="card">English</div>
+<div class="card">Hindi</div>
+<div class="card">Mathematics</div>
+<div class="card">Science</div>
+<div class="card">Computer</div>
+<div class="card">General Knowledge</div>
+</div>
+</section>
+
+<section id="timetable">
+<h2>School Time Table</h2>
+<div class="card">
+🕙 <b>10:00 AM – 4:00 PM</b><br>
+📅 Monday to Saturday<br>
+🛑 Sunday Holiday
+</div>
+</section>
+
+<section id="documents">
+<h2>Document Requirements</h2>
+<div class="card">
+<ul>
+<li>Aadhaar Card (Student)</li>
+<li>Birth Certificate</li>
+<li>Previous School Marksheet (If Applicable)</li>
+<li>Passport Size Photograph</li>
+</ul>
+</div>
+</section>
+
+<section id="transport">
+<h2>Transport Facility</h2>
+<div class="card">
+Transport facility available for local nearby areas only.<br>
+Safe & disciplined pickup and drop.
+</div>
+</section>
+
+<section id="events">
+<h2>School Events</h2>
+<div class="card">
+<ul>
+<li>Annual Function</li>
+<li>Republic Day Celebration</li>
+<li>Independence Day Celebration</li>
+<li>Cultural Programs</li>
+<li>Parents–Teacher Meeting (PTM)</li>
+</ul>
+</div>
 </section>
 
 <section id="news">
-<h2>Announcement & Notification</h2>
-<div class="notice">
-📢 <b>Admission Open:</b> 1 April to 31 July<br>
-📌 Limited Seats Available – Apply Online Now
-</div>
+<h2>News & Announcements</h2>
+<div class="notice">📢 Admission Open from <b>1 April to 31 July</b></div>
+<div class="notice">📢 Navodaya & Eklavya Exam Preparation Available</div>
 </section>
 
-<section id="form">
-<h2>Online Admission Form</h2>
+<section id="faq">
+<h2>FAQs</h2>
 <div class="card">
-<form>
-
-<label>Student Name (CAPITAL)</label>
-<input type="text" required oninput="this.value=this.value.toUpperCase()">
-
-<label>Parent Name (CAPITAL)</label>
-<input type="text" required oninput="this.value=this.value.toUpperCase()">
-
-<label>Student Date of Birth</label>
-<input type="date" required>
-
-<label>Student Phone Number</label>
-<input type="tel" required>
-
-<label>Address</label>
-<textarea required></textarea>
-
-<label>Student Aadhaar Card</label>
-<input type="file" required>
-
-<label>Parent Aadhaar Card</label>
-<input type="file" required>
-
-<label>Birth Certificate</label>
-<input type="file" required>
-
-<label>Parent Signature (Photo)</label>
-<input type="file" required>
-
-<label>Has student studied in another school before?</label>
-<select onchange="toggleMarksheet(this.value)">
-<option value="no">No</option>
-<option value="yes">Yes</option>
-</select>
-
-<div id="marksheet" style="display:none">
-<label>Previous Class Marksheet</label>
-<input type="file">
-</div>
-
-<button type="submit">Submit Application</button>
-</form>
+<p><b>Q:</b> Which medium is available?</p>
+<p><b>A:</b> English & Hindi Medium both available.</p>
+<hr>
+<p><b>Q:</b> Transport facility available?</p>
+<p><b>A:</b> Yes, for local areas.</p>
 </div>
 </section>
 
 <section id="contact">
 <h2>Contact Us</h2>
 <p>📍 Ganjhiyadih, Jashpur (CG)</p>
-<p>📞 8817755440</p>
+<p>📞 8817755440 / 8878064434</p>
 <p>📧 geniuspublicschool25@gmail.com</p>
 </section>
 
-<footer>© 2026 Genius Public School</footer>
+<footer>
+© 2026 Genius Public School
+</footer>
 
 <a class="whatsapp" href="https://wa.me/918817755440" target="_blank">WhatsApp</a>
-<a class="help" href="#">Chat Help</a>
+<div class="help-chat" onclick="alert('Help Center: Please contact on WhatsApp')">
+💬 Help Center
+</div>
 
 <script>
-function toggleMarksheet(val){
-document.getElementById("marksheet").style.display = val==="yes"?"block":"none";
-}
 let hindi=false;
 function toggleLang(){
-hindi=!hindi;
-document.getElementById("title").innerText=hindi?"जीनियस पब्लिक स्कूल, गंजहियाडीह":"Genius Public School, Ganjhiyadih";
+  hindi=!hindi;
+  document.getElementById("title").innerText =
+  hindi?"जीनियस पब्लिक स्कूल, गंजहियाडीह":"Genius Public School, Ganjhiyadih";
 }
 </script>
 
 </body>
-  </html>
+</html>
