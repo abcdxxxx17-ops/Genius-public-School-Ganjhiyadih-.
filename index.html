@@ -1,211 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Genius Public School | Ganjhiyadih</title>
-  <meta name="description" content="Genius Public School, Ganjhiyadih - Admission open from Nursery to Class 8th">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f9fc;
-      color: #333;
-    }
+<title>Genius Public School | Ganjhiyadih</title>
+<meta name="description" content="English & Hindi Medium School with Hostel Facility">
 
-    header {
-      background: #0b5ed7;
-      color: white;
-      padding: 15px;
-      text-align: center;<img src="logo.png" alt="Genius Public School Logo" class="school-logo">.school-logo{
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f7f9fc;
+  color:#333;
+}
+
+/* HEADER */
+header{
+  background:#0b5ed7;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+.school-logo{
   width:120px;
   height:auto;
   display:block;
   margin:0 auto 10px;
-      }
-    }
+}
 
-    header img {
-      width: 80px;
-      display: block;
-      margin: 0 auto 10px;
-    }
+/* MENU BAR */
+nav{
+  background:#084298;
+  padding:10px;
+  text-align:center;
+}
 
-    nav {
-      background: #084298;
-      padding: 10px;
-      text-align: center;
-    }
+nav a{
+  color:white;
+  margin:0 12px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+nav a:hover{
+  text-decoration:underline;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+/* SECTIONS */
+section{
+  padding:40px 20px;
+  max-width:1000px;
+  margin:auto;
+}
 
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+.hero{
+  background:#e7f1ff;
+  text-align:center;
+}
 
-    .hero {
-      text-align: center;
-      background: #e7f1ff;
-    }
+.hero button{
+  background:#0b5ed7;
+  color:white;
+  border:none;
+  padding:12px 25px;
+  font-size:16px;
+  border-radius:5px;
+  cursor:pointer;
+}
 
-    .hero button {
-      background: #0b5ed7;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
+/* CARDS */
+.highlights{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+  margin-top:20px;
+}
 
-    .highlights {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
+.card{
+  background:white;
+  padding:15px;
+  border-radius:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+  text-align:center;
+}
 
-    .card {
-      background: white;
-      padding: 15px;
-      text-align: center;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
+/* FORM */
+form{
+  background:white;
+  padding:20px;
+  border-radius:8px;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      background: white;
-    }
+input,select,textarea{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+}
 
-    table, th, td {
-      border: 1px solid #ccc;
-    }
+form button{
+  background:#0b5ed7;
+  color:white;
+  border:none;
+  padding:10px;
+  font-size:16px;
+}
 
-    th, td {
-      padding: 12px;
-      text-align: center;
-    }
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:white;
+  padding:12px 18px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-    th {
-      background: #0b5ed7;
-      color: white;
-    }
-
-    footer {
-      background: #0b5ed7;
-      color: white;
-      text-align: center;
-      padding: 12px;
-    }
-
-    @media (max-width: 600px) {
-      header img {
-        width: 60px;
-      }
-    }
-  </style>
+/* FOOTER */
+footer{
+  background:#0b5ed7;
+  color:white;
+  text-align:center;
+  padding:12px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <img src="images/logo.png" alt="Genius Public School Logo">
+  <img src="logo.png" class="school-logo" alt="School Logo">
   <h1>Genius Public School, Ganjhiyadih</h1>
-  <p>Quality Education with Discipline</p>
+  <p>English Medium & Hindi Medium School</p>
 </header>
 
 <nav>
   <a href="#home">Home</a>
-  <a href="#about">About Us</a>
+  <a href="#about">About</a>
   <a href="#facilities">Facilities</a>
-  <a href="#fees">Fee Structure</a>
+  <a href="#hostel">Hostel</a>
+  <a href="#admission">Admission</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <section id="home" class="hero">
   <h2>Welcome to Genius Public School</h2>
-  <p>Admission Open from Nursery to Class 8th</p>
-  <button>Apply Now</button>
+  <p>Admission Open – Nursery to Class 8th</p>
 
   <div class="highlights">
-    <div class="card">Quality Education</div>
+    <div class="card">English Medium</div>
+    <div class="card">Hindi Medium</div>
+    <div class="card">Hostel Facility</div>
     <div class="card">Experienced Teachers</div>
-    <div class="card">Smart Classes</div>
-    <div class="card">Strong Discipline</div>
   </div>
 </section>
 
 <section id="about">
   <h2>About Us</h2>
   <p>
-    Genius Public School, Ganjhiyadih is committed to providing quality education
-    with discipline, modern teaching methods and experienced teachers.
-  </p>
-
-  <h3>Vision & Mission</h3>
-  <p>
-    Our vision is to build confident, responsible and knowledgeable students
-    for a better future.
+    Genius Public School provides quality education in both
+    English & Hindi medium with strong discipline.
   </p>
 </section>
 
 <section id="facilities">
-  <h2>Our Facilities</h2>
+  <h2>Facilities</h2>
   <ul>
     <li>Smart Classrooms</li>
     <li>Computer Lab</li>
     <li>Library</li>
     <li>Sports Ground</li>
-    <li>Qualified Teachers</li>
+    <li>Hostel Facility</li>
   </ul>
 </section>
 
-<!-- FEE STRUCTURE SECTION -->
-<section id="fees">
-  <h2>Fee Structure (Yearly)</h2>
+<section id="hostel">
+  <h2>Hostel Facility</h2>
+  <p>
+    Our school provides a safe, secure and well-managed hostel
+    facility for students. Proper care, discipline and study
+    environment is ensured for all hostel students.
+  </p>
+</section>
 
-  <table>
-    <tr>
-      <th>Class</th>
-      <th>Yearly Fee (₹)</th>
-    </tr>
-    <tr>
-      <td>Nursery to UKG</td>
-      <td>₹ 4,500</td>
-    </tr>
-    <tr>
-      <td>Class 1st to 5th</td>
-      <td>₹ 6,000</td>
-    </tr>
-    <tr>
-      <td>Class 6th to 8th</td>
-      <td>₹ 8,000</td>
-    </tr>
-  </table>
+<section id="admission">
+  <h2>Online Admission Form</h2>
+  <form>
+    <input type="text" placeholder="Student Name" required>
+    <input type="number" placeholder="Class" required>
+    <select>
+      <option>English Medium</option>
+      <option>Hindi Medium</option>
+    </select>
+    <input type="text" placeholder="Parent Name">
+    <input type="tel" placeholder="Mobile Number">
+    <textarea placeholder="Address"></textarea>
+    <button type="submit">Submit Admission</button>
+  </form>
 </section>
 
 <section id="contact">
   <h2>Contact Us</h2>
-  <p>📍 <strong>Address:</strong> Genius Public School, Ganjhiyadih, Farsabahar, Jashpur, Chhattisgarh</p>
-  <p>📞 <strong>Phone:</strong> 8878064434, 8817755440</p>
-  <p>📧 <strong>Email:</strong> geniuspublicschool25@gmail.com</p>
+  <p>📍 Ganjhiyadih, Jashpur (CG)</p>
+  <p>📞 8878064434 / 8817755440</p>
+  <p>📧 geniuspublicschool25@gmail.com</p>
 </section>
 
 <footer>
-  © 2026 Genius Public School, Ganjhiyadih
+© 2026 Genius Public School
 </footer>
+
+<a class="whatsapp" href="https://wa.me/918878064434" target="_blank">
+WhatsApp
+</a>
+
+</body>
+</html>
