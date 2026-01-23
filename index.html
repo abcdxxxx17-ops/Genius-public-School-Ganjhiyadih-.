@@ -18,6 +18,7 @@ header{
   color:#fff;
   padding:25px;
   text-align:center;
+  position:relative;
 }
 .school-logo{
   width:110px;
@@ -76,13 +77,6 @@ h2{
   border-left:6px solid #ffc107;
   margin-bottom:10px;
 }
-.teacher{
-  text-align:center;
-}
-.teacher img{
-  width:100px;
-  border-radius:50%;
-}
 footer{
   background:#0b5ed7;
   color:#fff;
@@ -115,21 +109,22 @@ footer{
 <nav>
 <a href="#home">Home</a>
 <a href="#academics">Academics</a>
-<a href="#facilities">Facilities</a>
+<a href="#timetable">Time Table</a>
+<a href="#documents">Documents</a>
+<a href="#transport">Transport</a>
 <a href="#events">Events</a>
-<a href="#teachers">Teachers</a>
 <a href="#news">News</a>
 <a href="#faq">FAQs</a>
 <a href="#contact">Contact</a>
 </nav>
 
 <section id="home" class="hero">
-<h2>Welcome</h2>
-<p>Admission Open – Nursery to Class 8th</p>
+<h2 id="welcome">Welcome</h2>
+<p id="admissionText">Admission Open – Nursery to Class 8th</p>
 </section>
 
 <section id="academics">
-<h2>Academic Curriculum</h2>
+<h2 id="academicTitle">Academic Curriculum</h2>
 <div class="grid">
 <div class="card">English</div>
 <div class="card">Hindi</div>
@@ -140,34 +135,42 @@ footer{
 </div>
 </section>
 
-<section id="facilities">
-<h2>Facilities & Competitive Exam Preparation</h2>
-<div class="grid">
+<section id="timetable">
+<h2 id="timeTitle">School Time Table</h2>
 <div class="card">
-<h4>School Facilities</h4>
-<ul>
-<li>Smart Classes</li>
-<li>Library</li>
-<li>Sports</li>
-<li>Computer Lab</li>
-<li>Hostel Facility</li>
+<p id="timeText">
+🕙 School Timing: <b>10:00 AM to 4:00 PM</b><br>
+📅 Monday to Saturday<br>
+🛑 Sunday Holiday
+</p>
+</div>
+</section>
+
+<section id="documents">
+<h2 id="docTitle">Document Requirements</h2>
+<div class="card">
+<ul id="docList">
+<li>Aadhaar Card (Mandatory)</li>
+<li>Birth Certificate</li>
+<li>Previous School Marksheet (If Applicable)</li>
+<li>Passport Size Photograph</li>
 </ul>
 </div>
+</section>
+
+<section id="transport">
+<h2 id="transportTitle">Transport Facility</h2>
 <div class="card">
-<h4>Competitive Exams</h4>
-<ul>
-<li>Eklavya Exam – Class 5</li>
-<li>Navodaya Vidyalaya – Class 5</li>
-<li>Prayas – Class 8</li>
-<li>Sankalp – Class 8</li>
-</ul>
-</div>
+<p id="transportText">
+School transport facility is available for nearby areas.<br>
+Safe & timely pickup and drop facility for students.
+</p>
 </div>
 </section>
 
 <section id="events">
-<h2>School Events</h2>
-<ul>
+<h2 id="eventTitle">School Events</h2>
+<ul id="eventList">
 <li>Annual Function (Every Year)</li>
 <li>Basant Panchami Celebration</li>
 <li>Republic Day Celebration</li>
@@ -176,22 +179,8 @@ footer{
 </ul>
 </section>
 
-<section id="teachers">
-<h2>Our Teachers</h2>
-<div class="grid">
-<div class="card teacher">
-<img src="teacher.png">
-<p>Qualified & Experienced Faculty</p>
-</div>
-<div class="card teacher">
-<img src="teacher.png">
-<p>Dedicated Subject Experts</p>
-</div>
-</div>
-</section>
-
 <section id="news">
-<h2>News & Announcements</h2>
+<h2 id="newsTitle">News & Announcements</h2>
 <div class="notice">📢 Admission Open for 2026–27 Session</div>
 <div class="notice">📢 Navodaya Exam Preparation Batch Started</div>
 </section>
@@ -199,11 +188,11 @@ footer{
 <section id="faq">
 <h2>FAQs</h2>
 <div class="card">
-<p><b>Q:</b> Which medium is available?</p>
+<p><b>Q:</b> Medium available?</p>
 <p><b>A:</b> English & Hindi Medium both available.</p>
 <hr>
-<p><b>Q:</b> Hostel facility available?</p>
-<p><b>A:</b> Yes, safe & disciplined hostel facility.</p>
+<p><b>Q:</b> Hostel & transport available?</p>
+<p><b>A:</b> Yes, both facilities available.</p>
 </div>
 </section>
 
@@ -224,13 +213,42 @@ footer{
 let hindi=false;
 function toggleLang(){
   hindi=!hindi;
-  document.getElementById("title").innerText=
+
+  document.getElementById("title").innerText =
     hindi?"जीनियस पब्लिक स्कूल, गंजहियाडीह":"Genius Public School, Ganjhiyadih";
-  document.getElementById("subtitle").innerText=
+
+  document.getElementById("subtitle").innerText =
     hindi?"अंग्रेज़ी एवं हिंदी माध्यम विद्यालय | छात्रावास सुविधा":
     "English & Hindi Medium School | Hostel Facility";
+
+  document.getElementById("welcome").innerText =
+    hindi?"स्वागत है":"Welcome";
+
+  document.getElementById("admissionText").innerText =
+    hindi?"नर्सरी से कक्षा 8 तक प्रवेश खुला है":
+    "Admission Open – Nursery to Class 8th";
+
+  document.getElementById("academicTitle").innerText =
+    hindi?"शैक्षणिक पाठ्यक्रम":"Academic Curriculum";
+
+  document.getElementById("timeTitle").innerText =
+    hindi?"विद्यालय समय सारणी":"School Time Table";
+
+  document.getElementById("timeText").innerText =
+    hindi?"विद्यालय समय: सुबह 10 बजे से शाम 4 बजे तक\nसोमवार से शनिवार":
+    "School Timing: 10:00 AM to 4:00 PM\nMonday to Saturday";
+
+  document.getElementById("docTitle").innerText =
+    hindi?"आवश्यक दस्तावेज़":"Document Requirements";
+
+  document.getElementById("transportTitle").innerText =
+    hindi?"परिवहन सुविधा":"Transport Facility";
+
+  document.getElementById("transportText").innerText =
+    hindi?"विद्यालय की बस सुविधा उपलब्ध है":
+    "School transport facility is available";
 }
 </script>
 
 </body>
-      </html>    
+  </html>
