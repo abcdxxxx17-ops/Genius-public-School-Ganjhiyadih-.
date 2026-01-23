@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+      <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -10,34 +10,45 @@
 <style>
 body{
   margin:0;
-  font-family:Arial,sans-serif;
-  background:#f7f9fc;
+  font-family:Segoe UI,Arial,sans-serif;
+  background:#f4f6fb;
   color:#333;
 }
 header{
-  background:#0b5ed7;
+  background:linear-gradient(90deg,#0b5ed7,#084298);
   color:#fff;
   text-align:center;
-  padding:20px;
+  padding:25px;
 }
 .school-logo{
-  width:120px;
-  display:block;
-  margin:0 auto 10px;
+  width:110px;
+  margin-bottom:10px;
+}
+.lang-btn{
+  position:absolute;
+  top:15px;
+  right:15px;
+  background:#fff;
+  color:#0b5ed7;
+  border:none;
+  padding:6px 12px;
+  cursor:pointer;
+  border-radius:5px;
+  font-weight:bold;
 }
 nav{
   background:#084298;
-  padding:10px;
+  padding:12px;
   text-align:center;
 }
 nav a{
   color:#fff;
-  margin:0 12px;
+  margin:0 10px;
   text-decoration:none;
-  font-weight:bold;
+  font-weight:600;
 }
 section{
-  padding:40px 20px;
+  padding:50px 20px;
   max-width:1100px;
   margin:auto;
 }
@@ -45,49 +56,47 @@ section{
   background:#e7f1ff;
   text-align:center;
 }
-.highlights{
+.grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:15px;
-  margin-top:20px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 .card{
   background:#fff;
-  padding:15px;
-  border-radius:8px;
-  box-shadow:0 2px 6px rgba(0,0,0,.1);
-  text-align:center;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+h2{
+  color:#0b5ed7;
 }
 form{
   background:#fff;
   padding:25px;
-  border-radius:8px;
+  border-radius:10px;
 }
 label{
-  font-weight:bold;
-  display:block;
-  margin-top:10px;
+  font-weight:600;
 }
 input,select,textarea{
   width:100%;
   padding:10px;
-  margin-top:5px;
+  margin:8px 0 15px;
 }
 button{
   background:#0b5ed7;
   color:#fff;
   border:none;
   padding:12px;
+  border-radius:6px;
   font-size:16px;
-  border-radius:5px;
-  margin-top:15px;
   cursor:pointer;
 }
 footer{
   background:#0b5ed7;
   color:#fff;
   text-align:center;
-  padding:12px;
+  padding:15px;
 }
 .whatsapp{
   position:fixed;
@@ -100,131 +109,146 @@ footer{
   text-decoration:none;
   font-weight:bold;
 }
+.hidden{display:none;}
 </style>
 </head>
 
 <body>
 
+<button class="lang-btn" onclick="toggleLang()">हिंदी / English</button>
+
 <header>
-  <img src="logo.png" class="school-logo" alt="School Logo">
-  <h1>Genius Public School, Ganjhiyadih</h1>
-  <p>English & Hindi Medium School | Hostel Facility</p>
+<img src="logo.png" class="school-logo">
+<h1 data-en="Genius Public School, Ganjhiyadih"
+    data-hi="जीनियस पब्लिक स्कूल, गंजहियाडीह"></h1>
+<p data-en="English & Hindi Medium School | Hostel Facility"
+   data-hi="अंग्रेज़ी एवं हिंदी माध्यम विद्यालय | छात्रावास सुविधा"></p>
 </header>
 
 <nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#facilities">Facilities</a>
-  <a href="#hostel">Hostel</a>
-  <a href="#admission">Admission</a>
-  <a href="#contact">Contact</a>
+<a href="#home">Home</a>
+<a href="#academics">Academics</a>
+<a href="#facilities">Facilities</a>
+<a href="#events">Events</a>
+<a href="#teachers">Teachers</a>
+<a href="#news">News</a>
+<a href="#faq">FAQs</a>
+<a href="#admission">Admission</a>
+<a href="#contact">Contact</a>
 </nav>
 
 <section id="home" class="hero">
-  <h2>Welcome to Genius Public School</h2>
-  <p>Admission Open – Nursery to Class 8th</p>
-
-  <div class="highlights">
-    <div class="card">English Medium</div>
-    <div class="card">Hindi Medium</div>
-    <div class="card">Hostel Facility</div>
-    <div class="card">Experienced Teachers</div>
-  </div>
+<h2 data-en="Welcome to Genius Public School"
+    data-hi="जीनियस पब्लिक स्कूल में आपका स्वागत है"></h2>
+<p data-en="Admission Open – Nursery to Class 8th"
+   data-hi="प्रवेश प्रारंभ – नर्सरी से कक्षा 8 तक"></p>
 </section>
 
-<section id="about">
-  <h2>About Us</h2>
-  <p>Quality education with discipline for a bright future.</p>
+<section id="academics">
+<h2 data-en="Academic Curriculum" data-hi="शैक्षणिक पाठ्यक्रम"></h2>
+<div class="grid">
+<div class="card">English</div>
+<div class="card">Mathematics</div>
+<div class="card">Science</div>
+<div class="card">Computer Education</div>
+</div>
 </section>
 
 <section id="facilities">
-  <h2>Facilities</h2>
-  <ul>
-    <li>Smart Classrooms</li>
-    <li>Library</li>
-    <li>Sports</li>
-    <li>Computer Lab</li>
-    <li>Hostel Facility</li>
-  </ul>
+<h2 data-en="Facilities & Competitive Exam Preparation"
+    data-hi="सुविधाएं एवं प्रतियोगी परीक्षा तैयारी"></h2>
+<ul>
+<li>Eklavya & Navodaya Vidyalaya Exam (Class 5th)</li>
+<li>Prayas & Sankalp Preparation (Class 8th)</li>
+<li>Smart Classrooms</li>
+<li>Library & Computer Lab</li>
+<li>Hostel Facility</li>
+</ul>
 </section>
 
-<section id="hostel">
-  <h2>Hostel Facility</h2>
-  <p>Safe, disciplined and well-managed residential facility for students.</p>
+<section id="events">
+<h2 data-en="School Events" data-hi="विद्यालय कार्यक्रम"></h2>
+<ul>
+<li>Annual Function (Every Year)</li>
+<li>Basant Panchami Celebration</li>
+<li>Republic Day Celebration</li>
+<li>Cultural Events</li>
+<li>Parents–Teacher Meeting</li>
+</ul>
+</section>
+
+<section id="teachers">
+<h2 data-en="Our Teachers" data-hi="हमारे शिक्षक"></h2>
+<p data-en="Highly qualified and experienced teaching staff."
+   data-hi="अनुभवी एवं योग्य शिक्षकों की टीम।"></p>
+</section>
+
+<section id="news">
+<h2 data-en="News & Announcements" data-hi="समाचार एवं सूचना"></h2>
+<div class="card">
+<p>📢 Admission Open for 2026 Session</p>
+<p>📢 Parent-Teacher Meeting on First Saturday</p>
+</div>
+</section>
+
+<section id="faq">
+<h2>FAQs</h2>
+<div class="card">
+<p><strong>Q:</strong> Medium of instruction?</p>
+<p><strong>A:</strong> English & Hindi both available.</p>
+<p><strong>Q:</strong> Hostel available?</p>
+<p><strong>A:</strong> Yes, safe hostel facility.</p>
+</div>
 </section>
 
 <section id="admission">
-  <h2>Online Admission Form</h2>
+<h2>Online Admission Form</h2>
+<form>
+<label>Student ID</label>
+<input id="studentId" readonly>
 
-  <form>
-    <label>Student ID</label>
-    <input id="studentId" readonly>
+<label>Student Name</label>
+<input required>
 
-    <label>Student Name</label>
-    <input type="text" required>
+<label>Select Medium</label>
+<select required>
+<option>English Medium</option>
+<option>Hindi Medium</option>
+</select>
 
-    <label>Father's Name</label>
-    <input type="text" required>
+<label>Parent Mobile</label>
+<input required>
 
-    <label>Mother's Name</label>
-    <input type="text" required>
-
-    <label>Date of Birth</label>
-    <input type="date" required>
-
-    <label>Select Medium</label>
-    <select required>
-      <option value="">-- Select Medium --</option>
-      <option>English Medium</option>
-      <option>Hindi Medium</option>
-    </select>
-
-    <label>Identity Card</label>
-    <select>
-      <option>Aadhar Card</option>
-      <option>Birth Certificate</option>
-      <option>School ID Card</option>
-    </select>
-
-    <label>Admission Type</label>
-    <select>
-      <option>New Admission</option>
-      <option>Previously Studied</option>
-    </select>
-
-    <label>Previous Class Marksheet (if any)</label>
-    <input type="file">
-
-    <label>Parent Mobile Number</label>
-    <input type="tel" required>
-
-    <label>Address</label>
-    <textarea rows="3"></textarea>
-
-    <button type="submit">Submit Admission</button>
-  </form>
+<button>Submit Admission</button>
+</form>
 </section>
 
 <section id="contact">
-  <h2>Contact Us</h2>
-  <p>📍 Ganjhiyadih, Jashpur (CG)</p>
-  <p>📞 8817755440 / 8878064434</p>
-  <p>📧 geniuspublicschool25@gmail.com</p>
+<h2>Contact Us</h2>
+<p>📍 Ganjhiyadih, Jashpur (CG)</p>
+<p>📞 8817755440 / 8878064434</p>
+<p>📧 geniuspublicschool25@gmail.com</p>
 </section>
 
-<footer>
-© 2026 Genius Public School
-</footer>
+<footer>© 2026 Genius Public School</footer>
 
-<a class="whatsapp" href="https://wa.me/918817755440" target="_blank">
-WhatsApp
-</a>
+<a class="whatsapp" href="https://wa.me/918817755440" target="_blank">WhatsApp</a>
 
 <script>
-let y = new Date().getFullYear().toString().slice(-2);
-document.getElementById("studentId").value =
-  "GPSSTU" + y + Math.floor(100000 + Math.random() * 900000);
+let y=new Date().getFullYear().toString().slice(-2);
+document.getElementById("studentId").value=
+"GPSSTU"+y+Math.floor(100000+Math.random()*900000);
+
+let lang="en";
+function toggleLang(){
+  lang = lang==="en"?"hi":"en";
+  document.querySelectorAll("[data-en]").forEach(el=>{
+    el.innerText = el.dataset[lang];
+  });
+}
+toggleLang();
 </script>
 
 </body>
   </html>
+    
