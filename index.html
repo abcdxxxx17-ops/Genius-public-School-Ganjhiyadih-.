@@ -1,90 +1,230 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Genius Public School | Ganjhiyadih</title>
-<meta name="description" content="English & Hindi Medium School with Hostel Facility"><style>
-body{margin:0;font-family:Arial,sans-serif;background:#f7f9fc;color:#333}
-header{background:#0b5ed7;color:#fff;text-align:center;padding:20px}
-.school-logo{width:120px;display:block;margin:0 auto 10px}
-nav{background:#084298;padding:10px;text-align:center}
-nav a{color:#fff;margin:0 12px;text-decoration:none;font-weight:bold}
-section{padding:40px 20px;max-width:1100px;margin:auto}
-.hero{background:#e7f1ff;text-align:center}
-.highlights{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin-top:20px}
-.card{background:#fff;padding:15px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.1);text-align:center}
-form{background:#fff;padding:20px;border-radius:8px}
-input,select,textarea{width:100%;padding:10px;margin:8px 0}
-button{background:#0b5ed7;color:#fff;border:none;padding:10px;font-size:16px;border-radius:5px}
-.login-panels{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-footer{background:#0b5ed7;color:#fff;text-align:center;padding:12px}
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;padding:12px 18px;border-radius:50px;text-decoration:none;font-weight:bold}
-</style></head>
-<body><header>
-<img src="logo.png" class="school-logo">
-<h1>Genius Public School, Ganjhiyadih</h1>
-<p>English & Hindi Medium School | Hostel Facility</p>
-</header><nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#facilities">Facilities</a>
-<a href="#hostel">Hostel</a>
-<a href="#admission">Admission</a>
-<a href="#login">Login</a>
-<a href="#contact">Contact</a>
-</nav><section id="home" class="hero">
-<h2>Welcome to Genius Public School</h2>
-<p>Admission Open – Nursery to Class 8th</p>
-<div class="highlights">
-<div class="card">English Medium</div>
-<div class="card">Hindi Medium</div>
-<div class="card">Hostel Facility</div>
-<div class="card">Experienced Teachers</div>
-</div>
-</section><section id="about">
-<h2>About Us</h2>
-<p>Quality education with discipline for a bright future.</p>
-</section><section id="facilities">
-<h2>Facilities</h2>
-<ul>
-<li>Smart Classrooms</li>
-<li>Library</li>
-<li>Sports</li>
-<li>Computer Lab</li>
-<li>Hostel Facility</li>
-</ul>
-</section><section id="hostel">
-<h2>Hostel Facility</h2>
-<p>Safe and disciplined residential facility for students.</p>
-</section><section id="admission">
-<h2>Online Admission Form</h2>
-<form>
-<label>Student ID</label>
-<input id="studentId" readonly>
-<input placeholder="Student Name" required>
-<input placeholder="Father's Name" required>
-<input placeholder="Mother's Name" required>
-<input type="date" placeholder="Date of Birth" required>
-<select><option>Aadhar Card</option><option>Birth Certificate</option><option>School ID Card</option></select>
-<select><option>New Admission</option><option>Previously Studied</option></select>
-<select>
-<option>Select Medium</option>
-<option>English Medium</option>
-<option>Hindi Medium</option>
-</select>
-<input type="file" placeholder="Previous Marksheet">
-<input placeholder="Parent Mobile Number" required>
-<textarea placeholder="Address"></textarea>
-<button>Submit Admission</button>
-</form>
-</section><section id="contact">
-<h2>Contact Us</h2>
-<p>📍 Ganjhiyadih, Jashpur (CG)</p>
-<p>📞 8817755440 / 8878064434, 8878064434</p>
-<p>📧 geniuspublicschool25@gmail.com</p>
-</section><footer>© 2026 Genius Public School</footer>
-<a class="whatsapp" href="https://wa.me/918817755440" target="_blank">WhatsApp</a><script>
-let y=new Date().getFullYear().toString().slice(-2);
-document.getElementById('studentId').value='GPSSTU'+y+Math.floor(100000+Math.random()*900000);
-</script></body>
+<meta name="description" content="English & Hindi Medium School with Hostel Facility">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f7f9fc;
+  color:#333;
+}
+header{
+  background:#0b5ed7;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+}
+.school-logo{
+  width:120px;
+  display:block;
+  margin:0 auto 10px;
+}
+nav{
+  background:#084298;
+  padding:10px;
+  text-align:center;
+}
+nav a{
+  color:#fff;
+  margin:0 12px;
+  text-decoration:none;
+  font-weight:bold;
+}
+section{
+  padding:40px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+.hero{
+  background:#e7f1ff;
+  text-align:center;
+}
+.highlights{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+  margin-top:20px;
+}
+.card{
+  background:#fff;
+  padding:15px;
+  border-radius:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,.1);
+  text-align:center;
+}
+form{
+  background:#fff;
+  padding:25px;
+  border-radius:8px;
+}
+label{
+  font-weight:bold;
+  display:block;
+  margin-top:10px;
+}
+input,select,textarea{
+  width:100%;
+  padding:10px;
+  margin-top:5px;
+}
+button{
+  background:#0b5ed7;
+  color:#fff;
+  border:none;
+  padding:12px;
+  font-size:16px;
+  border-radius:5px;
+  margin-top:15px;
+  cursor:pointer;
+}
+footer{
+  background:#0b5ed7;
+  color:#fff;
+  text-align:center;
+  padding:12px;
+}
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:#fff;
+  padding:12px 18px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" class="school-logo" alt="School Logo">
+  <h1>Genius Public School, Ganjhiyadih</h1>
+  <p>English & Hindi Medium School | Hostel Facility</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#facilities">Facilities</a>
+  <a href="#hostel">Hostel</a>
+  <a href="#admission">Admission</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="home" class="hero">
+  <h2>Welcome to Genius Public School</h2>
+  <p>Admission Open – Nursery to Class 8th</p>
+
+  <div class="highlights">
+    <div class="card">English Medium</div>
+    <div class="card">Hindi Medium</div>
+    <div class="card">Hostel Facility</div>
+    <div class="card">Experienced Teachers</div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>Quality education with discipline for a bright future.</p>
+</section>
+
+<section id="facilities">
+  <h2>Facilities</h2>
+  <ul>
+    <li>Smart Classrooms</li>
+    <li>Library</li>
+    <li>Sports</li>
+    <li>Computer Lab</li>
+    <li>Hostel Facility</li>
+  </ul>
+</section>
+
+<section id="hostel">
+  <h2>Hostel Facility</h2>
+  <p>Safe, disciplined and well-managed residential facility for students.</p>
+</section>
+
+<section id="admission">
+  <h2>Online Admission Form</h2>
+
+  <form>
+    <label>Student ID</label>
+    <input id="studentId" readonly>
+
+    <label>Student Name</label>
+    <input type="text" required>
+
+    <label>Father's Name</label>
+    <input type="text" required>
+
+    <label>Mother's Name</label>
+    <input type="text" required>
+
+    <label>Date of Birth</label>
+    <input type="date" required>
+
+    <label>Select Medium</label>
+    <select required>
+      <option value="">-- Select Medium --</option>
+      <option>English Medium</option>
+      <option>Hindi Medium</option>
+    </select>
+
+    <label>Identity Card</label>
+    <select>
+      <option>Aadhar Card</option>
+      <option>Birth Certificate</option>
+      <option>School ID Card</option>
+    </select>
+
+    <label>Admission Type</label>
+    <select>
+      <option>New Admission</option>
+      <option>Previously Studied</option>
+    </select>
+
+    <label>Previous Class Marksheet (if any)</label>
+    <input type="file">
+
+    <label>Parent Mobile Number</label>
+    <input type="tel" required>
+
+    <label>Address</label>
+    <textarea rows="3"></textarea>
+
+    <button type="submit">Submit Admission</button>
+  </form>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>📍 Ganjhiyadih, Jashpur (CG)</p>
+  <p>📞 8817755440 / 8878064434</p>
+  <p>📧 geniuspublicschool25@gmail.com</p>
+</section>
+
+<footer>
+© 2026 Genius Public School
+</footer>
+
+<a class="whatsapp" href="https://wa.me/918817755440" target="_blank">
+WhatsApp
+</a>
+
+<script>
+let y = new Date().getFullYear().toString().slice(-2);
+document.getElementById("studentId").value =
+  "GPSSTU" + y + Math.floor(100000 + Math.random() * 900000);
+</script>
+
+</body>
   </html>
