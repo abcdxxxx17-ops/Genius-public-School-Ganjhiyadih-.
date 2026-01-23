@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -173,9 +173,6 @@ Transport facility available for local nearby areas only.
 <div class="card">
 <p><b>Q:</b> Which medium is available?</p>
 <p><b>A:</b> English & Hindi Medium both available.</p>
-<hr>
-<p><b>Q:</b> Transport facility available?</p>
-<p><b>A:</b> Yes, for local areas.</p>
 </div>
 </section>
 
@@ -184,6 +181,13 @@ Transport facility available for local nearby areas only.
 <h2>Online Admission Form</h2>
 <div class="card">
 <form>
+
+<label>Select Medium</label>
+<select required>
+  <option value="">-- Choose Medium --</option>
+  <option value="English">English Medium</option>
+  <option value="Hindi">Hindi Medium</option>
+</select>
 
 <label>Student Name (English – CAPITAL)</label>
 <input type="text" style="text-transform:uppercase" required>
@@ -262,4 +266,4 @@ function toggleLang(){
 </script>
 
 </body>
-      </html>
+  </html>
