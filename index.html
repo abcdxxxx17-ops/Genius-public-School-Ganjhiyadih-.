@@ -1,120 +1,196 @@
-  <!DOCTYPE html>    
-<html lang="en">    
-<head>    
-<meta charset="UTF-8">    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">    
-<title>Genius Public School | Ganjhiyadih</title>    
-    
-<style>    
-body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#f4f7fb;color:#333;}    
-header{background:linear-gradient(135deg,#0b5ed7,#084298);color:#fff;padding:25px;text-align:center;position:relative;}    
-.school-logo{width:110px;margin-bottom:10px;}    
-.lang-btn{position:absolute;top:15px;right:15px;background:#fff;color:#0b5ed7;border:none;padding:6px 10px;border-radius:5px;font-weight:bold;cursor:pointer;}    
-nav{background:#083b7a;padding:10px;text-align:center;}    
-nav a{color:#fff;margin:0 10px;text-decoration:none;font-weight:600;}    
-section{padding:45px 20px;max-width:1100px;margin:auto;}    
-.hero{background:#e9f1ff;text-align:center;}    
-h2{color:#0b5ed7;}    
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}    
-.card{background:#fff;padding:20px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.08);}    
-.notice{background:#fff3cd;padding:15px;border-left:6px solid #ffc107;margin-bottom:10px;}    
-footer{background:#0b5ed7;color:#fff;text-align:center;padding:15px;}    
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;padding:12px 18px;border-radius:50px;text-decoration:none;font-weight:bold;}    
-.apply-btn{display:inline-block;margin-top:15px;background:#0b5ed7;color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:bold;}    
-input,select,textarea{width:100%;padding:10px;margin:8px 0;border-radius:6px;border:1px solid #ccc;}    
-label{font-weight:bold;}    
-.flex{display:flex;gap:15px;}    
-.help-chat{position:fixed;bottom:90px;right:20px;background:#0b5ed7;color:#fff;padding:12px 16px;border-radius:50px;cursor:pointer;}    
-</style>    
-</head>    
-    
-<body onload="showAdmissionAlert()">    
-    
-<header>    
-<button class="lang-btn" onclick="toggleLang()">हिंदी / English</button>    
-<img src="logo.png" class="school-logo">    
-<h1 id="title">Genius Public School, Ganjhiyadih</h1>    
-<p id="subtitle">English & Hindi Medium School | Hostel Facility</p>    
-</header>    
-    
-<nav>    
-<a href="#home">Home</a>    
-<a href="#academics">Academics</a>    
-<a href="#timetable">Time Table</a>    
-<a href="#documents">Documents</a>    
-<a href="#transport">Transport</a>    
-<a href="#events">Events</a>    
-<a href="#news">News</a>    
-<a href="#faq">FAQs</a>    
-<a href="#admission">Admission</a>    
-<a href="#contact">Contact</a>    
-</nav>    
-    
-<!-- बाकी sections SAME हैं -->    
-    
-<section id="admission">    
-<h2>Online Admission Form</h2>    
-<div class="card">    
-<form onsubmit="sendWhatsApp(event)">    
-    
-<label>Select Medium</label>    
-<select id="medium" required>    
-<option value="">-- Choose Medium --</option>    
-<option>English Medium</option>    
-<option>Hindi Medium</option>    
-</select>    
-    
-<label>Student Name (English)</label>    
-<input id="sname" required>    
-    
-<label>Parent Name</label>    
-<input id="pname" required>    
-    
-<label>Date of Birth</label>    
-<div class="flex">    
-<select id="day" required><option>Day</option></select>    
-<select id="month" required><option>Month</option></select>    
-<select id="year" required><option>Year</option></select>    
-</div>    
-    
-<label>Student Aadhaar Number</label>    
-<input id="saadhaar" maxlength="12" required>    
-    
-<label>Parent Aadhaar Number</label>    
-<input id="paadhaar" maxlength="12" required>    
-    
-<label>Mobile Number</label>    
-<input id="mobile" required>    
-    
-<label>Address</label>    
-<textarea id="address" required></textarea>    
-    
-<button type="submit" class="apply-btn">Submit Admission Form</button>    
-    
-</form>    
-</div>    
-</section>    
-    
-<footer>© 2026 Genius Public School</footer>    
-    
-<a class="whatsapp" href="https://wa.me/918817755440" target="_blank">WhatsApp</a>    
-    
-<script>    
-function showAdmissionAlert(){    
-alert("📢 Admission Started!\nApply Online between 1 April – 31 July");    
-}    
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Genius Public School | Ganjhiyadih</title>
 
-for(let i=1;i<=31;i++)day.innerHTML+=`<option>${i}</option>`;
-["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"].forEach(m=>month.innerHTML+=`<option>${m}</option>`);
-for(let y=2010;y<=2024;y++)year.innerHTML+=`<option>${y}</option>`;    
+<style>
+body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#f4f7fb;color:#333;}
+header{background:linear-gradient(135deg,#0b5ed7,#084298);color:#fff;padding:25px;text-align:center;position:relative;}
+.school-logo{width:110px;margin-bottom:10px;}
+.lang-btn{position:absolute;top:15px;right:15px;background:#fff;color:#0b5ed7;border:none;padding:6px 10px;border-radius:5px;font-weight:bold;cursor:pointer;}
+nav{background:#083b7a;padding:10px;text-align:center;}
+nav a{color:#fff;margin:0 10px;text-decoration:none;font-weight:600;}
+section{padding:45px 20px;max-width:1100px;margin:auto;}
+.hero{background:#e9f1ff;text-align:center;}
+h2{color:#0b5ed7;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.card{background:#fff;padding:20px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.08);}
+.notice{background:#fff3cd;padding:15px;border-left:6px solid #ffc107;margin-bottom:10px;}
+footer{background:#0b5ed7;color:#fff;text-align:center;padding:15px;}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;padding:12px 18px;border-radius:50px;text-decoration:none;font-weight:bold;}
+.apply-btn{display:inline-block;margin-top:15px;background:#0b5ed7;color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:bold;}
+input,select,textarea{width:100%;padding:10px;margin:8px 0;border-radius:6px;border:1px solid #ccc;}
+label{font-weight:bold;}
+.flex{display:flex;gap:15px;}
+.help-chat{position:fixed;bottom:90px;right:20px;background:#0b5ed7;color:#fff;padding:12px 16px;border-radius:50px;cursor:pointer;}
+</style>
+</head>
+
+<body onload="showAdmissionAlert()">
+
+<header>
+<button class="lang-btn" onclick="toggleLang()">हिंदी / English</button>
+<img src="logo.png" class="school-logo">
+<h1 id="title">Genius Public School, Ganjhiyadih</h1>
+<p id="subtitle">English & Hindi Medium School | Hostel Facility</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#academics">Academics</a>
+<a href="#timetable">Time Table</a>
+<a href="#documents">Documents</a>
+<a href="#transport">Transport</a>
+<a href="#events">Events</a>
+<a href="#news">News</a>
+<a href="#faq">FAQs</a>
+<a href="#admission">Admission</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section id="home" class="hero">
+<h2>Welcome</h2>
+<p>Admission Open – Nursery to Class 8th</p>
+<a href="#admission" class="apply-btn">Apply Now</a>
+</section>
+
+<section id="academics">
+<h2>Academic Curriculum</h2>
+<div class="grid">
+<div class="card">English</div>
+<div class="card">Hindi</div>
+<div class="card">Mathematics</div>
+<div class="card">Science</div>
+<div class="card">Computer</div>
+<div class="card">General Knowledge</div>
+</div>
+</section>
+
+<section id="timetable">
+<h2>School Time Table</h2>
+<div class="card">
+🕙 <b>10:00 AM – 4:00 PM</b><br>
+📅 Monday to Saturday<br>
+🛑 Sunday Holiday
+</div>
+</section>
+
+<section id="documents">
+<h2>Document Requirements</h2>
+<div class="card">
+<ul>
+<li>Aadhaar Card (Student & Parent)</li>
+<li>Birth Certificate</li>
+<li>Previous School Marksheet (If Applicable)</li>
+<li>Passport Size Photograph</li>
+</ul>
+</div>
+</section>
+
+<section id="transport">
+<h2>Transport Facility</h2>
+<div class="card">
+Transport facility available for local nearby areas only.
+</div>
+</section>
+
+<section id="events">
+<h2>School Events</h2>
+<div class="card">
+<ul>
+<li>Annual Function</li>
+<li>Republic Day Celebration</li>
+<li>Independence Day Celebration</li>
+<li>Cultural Programs</li>
+<li>Parents–Teacher Meeting (PTM)</li>
+</ul>
+</div>
+</section>
+
+<section id="news">
+<h2>News & Announcements</h2>
+<div class="notice">📢 Admission Open from <b>1 April to 31 July</b></div>
+</section>
+
+<section id="faq">
+<h2>FAQs</h2>
+<div class="card">
+<p><b>Q:</b> Which medium is available?</p>
+<p><b>A:</b> English & Hindi Medium both available.</p>
+</div>
+</section>
+
+<!-- ADMISSION FORM -->
+<section id="admission">
+<h2>Online Admission Form</h2>
+<div class="card">
+<form onsubmit="sendWhatsApp(event)">
+
+<label>Select Medium</label>
+<select id="medium" required>
+<option value="">-- Choose Medium --</option>
+<option>English Medium</option>
+<option>Hindi Medium</option>
+</select>
+
+<label>Student Name (English)</label>
+<input id="sname" required>
+
+<label>Parent Name</label>
+<input id="pname" required>
+
+<label>Date of Birth</label>
+<div class="flex">
+<select id="day" required></select>
+<select id="month" required></select>
+<select id="year" required></select>
+</div>
+
+<label>Student Aadhaar Number</label>
+<input id="saadhaar" maxlength="12" required>
+
+<label>Parent Aadhaar Number</label>
+<input id="paadhaar" maxlength="12" required>
+
+<label>Mobile Number</label>
+<input id="mobile" required>
+
+<label>Address</label>
+<textarea id="address" required></textarea>
+
+<button type="submit" class="apply-btn">Submit Admission Form</button>
+</form>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<p>📍 Ganjhiyadih, Jashpur (CG)</p>
+<p>📞 8817755440 / 8878064434</p>
+<p>📧 geniuspublicschool25@gmail.com</p>
+</section>
+
+<footer>© 2026 Genius Public School</footer>
+
+<a class="whatsapp" href="https://wa.me/918817755440" target="_blank">WhatsApp</a>
+
+<script>
+function showAdmissionAlert(){
+  alert("📢 Admission Started!\nApply Online between 1 April – 31 July");
+}
+
+for(let i=1;i<=31;i++) day.innerHTML+=`<option>${i}</option>`;
+["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+.forEach(m=>month.innerHTML+=`<option>${m}</option>`);
+for(let y=2010;y<=2025;y++) year.innerHTML+=`<option>${y}</option>`;
 
 function sendWhatsApp(e){
 e.preventDefault();
-
 alert("🎉 Welcome to Genius Public School!");
 
-let msg =
-`New Admission Form
+let msg = `New Admission Form
 Medium: ${medium.value}
 Student: ${sname.value}
 Parent: ${pname.value}
@@ -126,7 +202,14 @@ Address: ${address.value}`;
 
 window.open("https://wa.me/918817755440?text="+encodeURIComponent(msg));
 }
-</script>    
-    
-</body>    
-</html>
+
+let hindi=false;
+function toggleLang(){
+hindi=!hindi;
+document.getElementById("title").innerText =
+hindi?"जीनियस पब्लिक स्कूल, गंजहियाडीह":"Genius Public School, Ganjhiyadih";
+}
+</script>
+
+</body>
+  </html>
