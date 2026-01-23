@@ -26,32 +26,12 @@ header{
   border:none;padding:6px 10px;
   border-radius:5px;font-weight:bold;cursor:pointer;
 }
-nav{
-  background:#083b7a;
-  padding:10px;
-  text-align:center;
-}
-nav a{
-  color:#fff;
-  margin:0 10px;
-  text-decoration:none;
-  font-weight:600;
-}
-section{
-  padding:45px 20px;
-  max-width:1100px;
-  margin:auto;
-}
-.hero{
-  background:#e9f1ff;
-  text-align:center;
-}
+nav{background:#083b7a;padding:10px;text-align:center;}
+nav a{color:#fff;margin:0 10px;text-decoration:none;font-weight:600;}
+section{padding:45px 20px;max-width:1100px;margin:auto;}
+.hero{background:#e9f1ff;text-align:center;}
 h2{color:#0b5ed7;}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
 .card{
   background:#fff;
   padding:20px;
@@ -64,22 +44,12 @@ h2{color:#0b5ed7;}
   border-left:6px solid #ffc107;
   margin-bottom:10px;
 }
-footer{
-  background:#0b5ed7;
-  color:#fff;
-  text-align:center;
-  padding:15px;
-}
+footer{background:#0b5ed7;color:#fff;text-align:center;padding:15px;}
 .whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25d366;
-  color:#fff;
-  padding:12px 18px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:bold;
+  position:fixed;bottom:20px;right:20px;
+  background:#25d366;color:#fff;
+  padding:12px 18px;border-radius:50px;
+  text-decoration:none;font-weight:bold;
 }
 .apply-btn{
   display:inline-block;
@@ -91,6 +61,14 @@ footer{
   text-decoration:none;
   font-weight:bold;
 }
+input,select,textarea{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+label{font-weight:bold;}
 .help-chat{
   position:fixed;
   bottom:90px;
@@ -122,13 +100,14 @@ footer{
 <a href="#events">Events</a>
 <a href="#news">News</a>
 <a href="#faq">FAQs</a>
+<a href="#admission">Admission</a>
 <a href="#contact">Contact</a>
 </nav>
 
 <section id="home" class="hero">
 <h2>Welcome</h2>
 <p>Admission Open – Nursery to Class 8th</p>
-<a href="#contact" class="apply-btn">Apply Now</a>
+<a href="#admission" class="apply-btn">Apply Now</a>
 </section>
 
 <section id="academics">
@@ -156,7 +135,7 @@ footer{
 <h2>Document Requirements</h2>
 <div class="card">
 <ul>
-<li>Aadhaar Card (Student)</li>
+<li>Aadhaar Card (Student & Parent)</li>
 <li>Birth Certificate</li>
 <li>Previous School Marksheet (If Applicable)</li>
 <li>Passport Size Photograph</li>
@@ -167,8 +146,7 @@ footer{
 <section id="transport">
 <h2>Transport Facility</h2>
 <div class="card">
-Transport facility available for local nearby areas only.<br>
-Safe & disciplined pickup and drop.
+Transport facility available for local nearby areas only.
 </div>
 </section>
 
@@ -188,7 +166,6 @@ Safe & disciplined pickup and drop.
 <section id="news">
 <h2>News & Announcements</h2>
 <div class="notice">📢 Admission Open from <b>1 April to 31 July</b></div>
-<div class="notice">📢 Navodaya & Eklavya Exam Preparation Available</div>
 </section>
 
 <section id="faq">
@@ -199,6 +176,49 @@ Safe & disciplined pickup and drop.
 <hr>
 <p><b>Q:</b> Transport facility available?</p>
 <p><b>A:</b> Yes, for local areas.</p>
+</div>
+</section>
+
+<!-- ONLINE ADMISSION FORM -->
+<section id="admission">
+<h2>Online Admission Form</h2>
+<div class="card">
+<form>
+<label>Student Name (CAPITAL LETTERS)</label>
+<input type="text" style="text-transform:uppercase" required>
+
+<label>Parent Name (CAPITAL LETTERS)</label>
+<input type="text" style="text-transform:uppercase" required>
+
+<label>Student Date of Birth</label>
+<input type="date" required>
+
+<label>Student Aadhaar Card (Upload)</label>
+<input type="file" required>
+
+<label>Parent Aadhaar Card (Upload)</label>
+<input type="file" required>
+
+<label>Student Photograph (Upload)</label>
+<input type="file" required>
+
+<label>Parent Signature Photo (Upload)</label>
+<input type="file" required>
+
+<label>Birth Certificate (Upload)</label>
+<input type="file" required>
+
+<label>Previous Year Marksheet (If Applicable)</label>
+<input type="file">
+
+<label>Mobile Number</label>
+<input type="tel" required>
+
+<label>Address</label>
+<textarea required></textarea>
+
+<button type="submit" class="apply-btn">Submit Admission Form</button>
+</form>
 </div>
 </section>
 
@@ -228,4 +248,4 @@ function toggleLang(){
 </script>
 
 </body>
-</html>
+                                       </html>
